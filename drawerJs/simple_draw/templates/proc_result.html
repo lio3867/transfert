@@ -1,0 +1,18 @@
+<!-- Panel for visualizing the processings -->
+
+<div id="canvas-editor"></div>
+
+<script>
+
+    $(document).ready(function () {
+           var drawer = new DrawerJs.Drawer(null, {
+               texts: customLocalization,
+               plugins: drawerPlugins,
+               defaultImageUrl: '/images/drawer.jpg',
+               defaultActivePlugin : { name : 'Pencil', mode : 'lastUsed'},
+           }, 600, 600);
+           $('#canvas-editor').append(drawer.getHtml());
+           drawer.onInsert();
+       });
+
+</script>
